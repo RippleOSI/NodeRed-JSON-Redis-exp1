@@ -16,21 +16,25 @@
 ```
     Type                  Name                                                      Description
 
-    Http        [post] /patient/:ptId/allergies     For API post requests. You can simply add new API routes for 
-                                                    POST by adding this node and change the URL property of the node.
+    Http        [post] /patient/:ptId/allergies     For API post requests. You can simply add new API
+                                                    routes for POST by adding this node and change the
+                                                    URL property of the node.
 
-    Http        [get] /patient/:ptId/allergies      For API get requests. You can simply add new API routes for GET
-                                                    by adding this node and change the URL property of the node.
+    Http        [get] /patient/:ptId/allergies      For API get requests. You can simply add new API
+                                                    routes for GET by adding this node and change the
+                                                    URL property of the node.
 
-    Change              PostParams                  This node accepts POST request parameters and convert the
-                                                    datatype so that it can be used for storing data in the redis 
-                                                    database. You have to add this node as well as  Http node when 
-                                                    you add new API routes for POST. And then configure the node 
-                                                    using JSONata. Have a look at existing node and get some 
-                                                    ideas for configuring the node.
+    Change              PostParams                  This node accepts POST request parameters and
+                                                    convert the datatype so that it can be used
+                                                    for storing data in the redis database.
+                                                    You have to add this node as well as  Http node when 
+                                                    you add new API routes for POST. And then configure
+                                                    the node using JSONata. Have a look at existing node
+                                                    and get some ideas for configuring the node.
 
-    Change              GetParams                   This node is almost same as PostParams node. It just change 
-                                                    datatype so that it can be used for retrieving data from redis.
+    Change              GetParams                   This node is almost same as PostParams node. It just
+                                                    change datatype so that it can be used for retrieving
+                                                    data from redis.
 
     Function         Redis HSET params              This node generates data for HSET command in redis. 
                                                     Return an array of parameters for HSET command. 
@@ -42,8 +46,8 @@
                                                     HGET command requires two parameters in array form.
                                                     [key, field]
 
-    Function         Transform method               This node extracts transform value from request query parameters.
-                                                    It is used for transform of JSON data.
+    Function         Transform method               This node extracts transform value from request query
+                                                    parameters. It is used for transform of JSON data.
 
     Redis cmd           Redis hset                  Executes the HSET command in redis.
                                                     Have a look at node configuration.
@@ -53,7 +57,7 @@
 
     Function            Result JSON                 JSON data for response when API Post request is successed.
 
-  Http response        Post Success                 Makes an HTTP response with JSON data containing success info.
+  Http response        Post Success                 Makes an HTTP response with success info.
 
     Switch              switch                      Switch node for checking HGET result from redis.
                                                     If the return value is null, make a HTTP response promptly.
