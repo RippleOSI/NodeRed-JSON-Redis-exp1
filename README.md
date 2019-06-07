@@ -15,7 +15,7 @@ This project is well-designed, easy to maintain and extend and well-documented a
 ## Nodes Description in the flow
 ```
     Type                   Name                                         Description
-  -------------------------------------------------------------------------------------------------------
+    
     Http        [post] /patient/:ptId/allergies     For API post requests. You can simply add new API
                                                     routes for POST by adding this node and change the
                                                     URL property of the node.
