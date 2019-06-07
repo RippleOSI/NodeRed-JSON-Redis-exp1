@@ -1,18 +1,19 @@
-#Node Red Project for Medical API
+# Node Red Project for Medical API
 
-##Project Description
+## Project Description
     Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways. The light-weight runtime is built on Node.js, taking full advantage of its event-driven, non-blocking model.
     This project is designed for several APIs storing and retrieving various medical data.
     The medical data is stored in Redis database which is the fastest database now.
     This project is well-designed, easy to maintain and extend and well-documented as well.
 
-##Installation Guide
-    1. Install Node Red from Docker
+## Installation Guide
+    - Install Node Red from Docker
         - Run commands in install.sh
-    2. Import flows from JSON file and deploy it.
-    3. Enjoy your API
+    - Import flows from JSON file and deploy it.
+    - Enjoy your API
 
-##Nodes Description in the flow
+## Nodes Description in the flow
+```
     Type                  Name                                                      Description
 
     Http        [post] /patient/:ptId/allergies     For API post requests. You can simply add new API routes for POST by adding this node
@@ -70,6 +71,4 @@
     Function            No Transform                This node removes transform property from JSON object. This is needless for our results.
 
   Http response         GET success                 Makes an HTTP response with final result.
-
-
-    
+```
