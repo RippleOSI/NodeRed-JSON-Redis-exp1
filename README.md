@@ -12,6 +12,11 @@ This project is well-designed, easy to maintain and extend and well-documented a
 - Import flows from JSON file and deploy it.
 - Enjoy your API
 
+## Overview of Approach
+
+![NodeRed flow](/img/NodeRed_JSONata_Redis_exp1.PNG)
+
+
 ## Nodes Description in the flow
 ```
     Type                   Name                                         Description
