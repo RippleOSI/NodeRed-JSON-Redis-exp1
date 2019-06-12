@@ -7,8 +7,11 @@ The medical data is stored in Redis database which is the fastest database now.
 This project is well-designed, easy to maintain and extend and well-documented as well.
 
 ## Installation Guide
-- Install Node Red from Docker
-    - Run commands in install.sh
+- Run Docker Image
+  - docker build -t nodered-redis .
+  - docker run --name mynodered nodered-redis
+  - docker inspect -f "{{ .NetworkSettings.IPAddress }}" mynodered
+  - Open your browser and enter URL with docker's IP address and port 1880.
 - Import flows from JSON file and deploy it.
 - Enjoy your API
 
